@@ -83,6 +83,11 @@ public class TennisTest {
         p2GetScores(4);
         assertScoreEqualsWith("P2 Win");
     }
+    @Test(expected = IllegalStateException.class)
+    public void GameOver() {
+        p1Win();
+        p1GetScores(1);
+    }
 
     private void assertScoreEqualsWith(String scoreText) {
         assertEquals(scoreText, tennis.scoreText());
