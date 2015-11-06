@@ -3,17 +3,13 @@
  */
 public class Tennis {
 
-    String scoreText = "Love All";
+    MatchScore score = new StartGame();
 
     public String scoreText() {
-        return scoreText;
+        return score.scoreText();
     }
 
     public void p1GetScore() {
-        if (scoreText.equals("Love All")) {
-            scoreText = "Fifteen Love";
-        } else {
-            scoreText = "Thirty Love";
-        }
+        score = score.p1GetScore();
     }
 }
