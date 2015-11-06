@@ -14,11 +14,11 @@ public class WinScore implements MatchScore {
 
     @Override
     public MatchScore p1GetScore() {
-        return null;
+        throw new IllegalStateException("GameOver");
     }
 
     @Override
     public MatchScore p2GetScore() {
-        return null;
+        throw new IllegalStateException("GameOver");
     }
 }
