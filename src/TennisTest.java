@@ -13,17 +13,21 @@ public class TennisTest {
     }
     @Test
     public void FifteenLove() {
-        tennis.p1GetScore();
+        p1GetScores(1);
         assertScoreEqualsWith("Fifteen Love");
     }
     @Test
     public void ThirtyLove() {
-        tennis.p1GetScore();
-        tennis.p1GetScore();
+        p1GetScores(2);
         assertScoreEqualsWith("Thirty Love");
     }
 
     private void assertScoreEqualsWith(String scoreText) {
         assertEquals(scoreText, tennis.scoreText());
+    }
+
+    private void p1GetScores(int times) {
+        while (times-- > 0)
+            tennis.p1GetScore();
     }
 }
