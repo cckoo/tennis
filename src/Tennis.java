@@ -10,6 +10,10 @@ public class Tennis {
     }
 
     public void p1GetScore() {
-        scoreText = "Fifteen Love";
+        if (scoreText.equals("Love All")) {
+            scoreText = "Fifteen Love";
+        } else {
+            scoreText = "Thirty Love";
+        }
     }
 }
