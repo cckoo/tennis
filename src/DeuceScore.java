@@ -14,6 +14,6 @@ public class DeuceScore implements MatchScore {
 
     @Override
     public MatchScore p2GetScore() {
-        return null;
+        return new Advantage("P2");
     }
 }
