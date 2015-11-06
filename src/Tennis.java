@@ -3,7 +3,7 @@
  */
 public class Tennis {
 
-    MatchScore score = new StartGame();
+    MatchScore score = new DrawScore(TennisScore.Love);
 
     public String scoreText() {
         return score.scoreText();

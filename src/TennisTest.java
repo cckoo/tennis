@@ -88,6 +88,18 @@ public class TennisTest {
         p1Win();
         p1GetScores(1);
     }
+    @Test
+    public void ThirtyFifteen() {
+        p1GetScores(2);
+        p2GetScores(1);
+        assertScoreEqualsWith("Thirty Fifteen");
+    }
+    @Test
+    public void FortyThirty() {
+        p1GetScores(3);
+        p2GetScores(2);
+        assertScoreEqualsWith("Forty Thirty");
+    }
 
     private void assertScoreEqualsWith(String scoreText) {
         assertEquals(scoreText, tennis.scoreText());
