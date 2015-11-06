@@ -6,16 +6,18 @@ import static org.junit.Assert.assertEquals;
  * Created by chengwei07 on 2015-11-06.
  */
 public class TennisTest {
+    private Tennis tennis = new Tennis();
     @Test
     public void startLoveAll() {
-        Tennis tennis = new Tennis();
-        assertEquals("Love All", tennis.scoreText());
+        assertScoreEqualsWith("Love All");
     }
     @Test
     public void FifteenLove() {
-        Tennis tennis = new Tennis();
         tennis.p1GetScore();
-        assertEquals("Fifteen Love", tennis.scoreText());
+        assertScoreEqualsWith("Fifteen Love");
     }
 
+    private void assertScoreEqualsWith(String scoreText) {
+        assertEquals(scoreText, tennis.scoreText());
+    }
 }
