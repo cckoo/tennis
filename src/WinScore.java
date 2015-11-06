@@ -2,8 +2,8 @@
  * Created by chengwei07 on 2015-11-06.
  */
 public class WinScore implements MatchScore {
-    private String winer;
-    public WinScore(String winer) {
+    private Player winer;
+    public WinScore(Player winer) {
         this.winer = winer;
     }
 

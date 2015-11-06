@@ -9,11 +9,11 @@ public class DeuceScore implements MatchScore {
 
     @Override
     public MatchScore p1GetScore() {
-        return new Advantage("P1");
+        return new Advantage(Player.P1);
     }
 
     @Override
     public MatchScore p2GetScore() {
-        return new Advantage("P2");
+        return new Advantage(Player.P2);
     }
 }

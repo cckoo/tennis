@@ -25,17 +25,26 @@ public class PlayerScore implements MatchScore {
     }
 
     private MatchScore nextMatchScore(TennisScore p1Score, TennisScore p2Score) {
-        if (p1Score.equals(p2Score)) {
-            if (p1Score.equals(TennisScore.Forty))
-                return new DeuceScore();
+        if (isDeuce(p1Score, p2Score))
+            return new DeuceScore();
+        if (isDraw(p1Score, p2Score))
             return new DrawScore(p2Score);
-        }
 
-        if (p1Score.equals(TennisScore.GameOver))
-            return new WinScore("P1");
-        if (p2Score.equals(TennisScore.GameOver))
-            return new WinScore("P2");
+        if (isWin(p1Score, p2Score))
+            return new WinScore(p1Score.equals(TennisScore.GameOver) ? Player.P1 : Player.P2);
 
         return new PlayerScore(p1Score, p2Score);
+    }
+
+    private boolean isDeuce(TennisScore p1Score, TennisScore p2Score) {
+        return p1Score.equals(p2Score) && p1Score.equals(TennisScore.Forty);
+    }
+
+    private boolean isDraw(TennisScore p1Score, TennisScore p2Score) {
+        return p1Score.equals(p2Score);
+    }
+
+    private boolean isWin(TennisScore p1Score, TennisScore p2Score) {
+        return p1Score.equals(TennisScore.GameOver) || p2Score.equals(TennisScore.GameOver);
     }
 }
