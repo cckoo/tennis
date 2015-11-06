@@ -4,4 +4,5 @@
 public interface MatchScore {
     String scoreText();
     MatchScore p1GetScore();
+    MatchScore p2GetScore();
 }

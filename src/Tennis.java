@@ -12,4 +12,8 @@ public class Tennis {
     public void p1GetScore() {
         score = score.p1GetScore();
     }
+
+    public void p2GetScore() {
+        score = score.p2GetScore();
+    }
 }

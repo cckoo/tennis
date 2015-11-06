@@ -26,6 +26,12 @@ public class TennisTest {
         p1GetScores(3);
         assertScoreEqualsWith("Forty Love");
     }
+    @Test
+    public void FifteenAll() {
+        p1GetScores(1);
+        p2GetScores(1);
+        assertScoreEqualsWith("Fifteen All");
+    }
 
     private void assertScoreEqualsWith(String scoreText) {
         assertEquals(scoreText, tennis.scoreText());
@@ -34,5 +40,10 @@ public class TennisTest {
     private void p1GetScores(int times) {
         while (times-- > 0)
             tennis.p1GetScore();
+    }
+
+    private void p2GetScores(int times) {
+        while (times-- > 0)
+            tennis.p2GetScore();
     }
 }

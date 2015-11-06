@@ -12,4 +12,9 @@ public class StartGame implements MatchScore {
     public MatchScore p1GetScore() {
         return new PlayerScore(score.next());
     }
+
+    @Override
+    public MatchScore p2GetScore() {
+        return new PlayerScore(score.next());
+    }
 }
