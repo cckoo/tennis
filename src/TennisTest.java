@@ -42,7 +42,7 @@ public class TennisTest {
         assertScoreEqualsWith("Deuce");
     }
     @Test
-    public  void Advantage() {
+    public  void p1Advantage() {
         drawScore(3);
         tennis.p1GetScore();
         assertScoreEqualsWith("P1 Advantage");
