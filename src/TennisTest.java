@@ -28,8 +28,7 @@ public class TennisTest {
     }
     @Test
     public void FifteenAll() {
-        p1GetScores(1);
-        p2GetScores(1);
+        drawScore(1);
         assertScoreEqualsWith("Fifteen All");
     }
 
@@ -45,5 +44,10 @@ public class TennisTest {
     private void p2GetScores(int times) {
         while (times-- > 0)
             tennis.p2GetScore();
+    }
+
+    private void drawScore(int score) {
+        p1GetScores(score);
+        p2GetScores(score);
     }
 }
