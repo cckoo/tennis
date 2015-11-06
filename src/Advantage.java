@@ -14,6 +14,8 @@ public class Advantage implements MatchScore {
 
     @Override
     public MatchScore p1GetScore() {
+        if (advantager.equals("P1"))
+            return new WinScore(advantager);
         return new DeuceScore();
     }
 
