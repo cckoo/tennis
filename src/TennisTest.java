@@ -54,13 +54,13 @@ public class TennisTest {
     @Test
     public void p1AdvantageP2getScoreIsDeuce() {
         p1AdvantageScore();
-        tennis.p2GetScore();
+        p2GetScores(1);
         assertScoreEqualsWith("Deuce");
     }
     @Test
     public void p2AdvantageP1getScoreIsDeuce() {
         p2AdvantageScore();
-        tennis.p1GetScore();
+        p1GetScores(1);
         assertScoreEqualsWith("Deuce");
     }
     @Test
@@ -72,6 +72,11 @@ public class TennisTest {
     public void p2AdvantageP2GetScoreIsP1Win() {
         p2Win();
         assertScoreEqualsWith("P2 Win");
+    }
+    @Test
+    public void normalWin() {
+        p1GetScores(4);
+//        assertScoreEqualsWith("P1 Win");
     }
 
     private void assertScoreEqualsWith(String scoreText) {
