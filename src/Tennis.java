@@ -3,11 +3,13 @@
  */
 public class Tennis {
 
+    String scoreText = "Love All";
+
     public String scoreText() {
-        return "Love All";
+        return scoreText;
     }
 
     public void p1GetScore() {
-
+        scoreText = "Fifteen Love";
     }
 }
