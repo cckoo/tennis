@@ -21,6 +21,11 @@ public class TennisTest {
         p1GetScores(2);
         assertScoreEqualsWith("Thirty Love");
     }
+    @Test
+    public void FortyLove() {
+        p1GetScores(3);
+        assertScoreEqualsWith("Forty Love");
+    }
 
     private void assertScoreEqualsWith(String scoreText) {
         assertEquals(scoreText, tennis.scoreText());
