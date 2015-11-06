@@ -16,21 +16,21 @@ public class PlayerScore implements MatchScore {
 
     @Override
     public MatchScore p1GetScore() {
-        if (isDraw(p1Score.next(), p2Score))
-            return new DrawScore(p2Score);
-
-        return new PlayerScore(p1Score.next(), p2Score);
+        return nextMatchScore(p1Score.next(), p2Score);
     }
 
     @Override
     public MatchScore p2GetScore() {
-        if (isDraw(p1Score, p2Score.next()))
-            return new DrawScore(p1Score);
-
-        return new PlayerScore(p1Score, p2Score.next());
+        return nextMatchScore(p1Score, p2Score.next());
     }
 
-    private Boolean isDraw(TennisScore p1Score, TennisScore p2Score) {
-        return p1Score.equals(p2Score);
+    private MatchScore nextMatchScore(TennisScore p1Score, TennisScore p2Score) {
+        if (p1Score.equals(p2Score)) {
+            if (p1Score.equals(TennisScore.Forty))
+                return new DeuceScore();
+            return new DrawScore(p2Score);
+        }
+
+        return new PlayerScore(p1Score, p2Score);
     }
 }

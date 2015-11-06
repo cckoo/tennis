@@ -31,6 +31,16 @@ public class TennisTest {
         drawScore(1);
         assertScoreEqualsWith("Fifteen All");
     }
+    @Test
+    public void ThirtyAll() {
+        drawScore(2);
+        assertScoreEqualsWith("Thirty All");
+    }
+    @Test
+    public void Deuce() {
+        drawScore(3);
+        assertScoreEqualsWith("Deuce");
+    }
 
     private void assertScoreEqualsWith(String scoreText) {
         assertEquals(scoreText, tennis.scoreText());
