@@ -6,4 +6,8 @@ public class Tennis {
     public String scoreText() {
         return "Love All";
     }
+
+    public void p1GetScore() {
+
+    }
 }
