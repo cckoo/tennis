@@ -30,8 +30,11 @@ public class PlayerScore implements MatchScore {
                 return new DeuceScore();
             return new DrawScore(p2Score);
         }
+
         if (p1Score.equals(TennisScore.GameOver))
             return new WinScore("P1");
+        if (p2Score.equals(TennisScore.GameOver))
+            return new WinScore("P2");
 
         return new PlayerScore(p1Score, p2Score);
     }

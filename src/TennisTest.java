@@ -74,9 +74,14 @@ public class TennisTest {
         assertScoreEqualsWith("P2 Win");
     }
     @Test
-    public void normalWin() {
+    public void p1NormalWin() {
         p1GetScores(4);
-//        assertScoreEqualsWith("P1 Win");
+        assertScoreEqualsWith("P1 Win");
+    }
+    @Test
+    public void p2NormalWin() {
+        p2GetScores(4);
+        assertScoreEqualsWith("P2 Win");
     }
 
     private void assertScoreEqualsWith(String scoreText) {
