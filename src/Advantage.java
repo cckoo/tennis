@@ -14,11 +14,11 @@ public class Advantage implements MatchScore {
 
     @Override
     public MatchScore p1GetScore() {
-        return null;
+        return new DeuceScore();
     }
 
     @Override
     public MatchScore p2GetScore() {
-        return null;
+        return new DeuceScore();
     }
 }
