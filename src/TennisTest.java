@@ -38,13 +38,12 @@ public class TennisTest {
     }
     @Test
     public void Deuce() {
-        drawScore(3);
+        deuce();
         assertScoreEqualsWith("Deuce");
     }
     @Test
     public  void p1Advantage() {
-        drawScore(3);
-        tennis.p1GetScore();
+        p1advantageScore();
         assertScoreEqualsWith("P1 Advantage");
     }
 
@@ -65,5 +64,14 @@ public class TennisTest {
     private void drawScore(int score) {
         p1GetScores(score);
         p2GetScores(score);
+    }
+
+    private void deuce() {
+        drawScore(3);
+    }
+
+    private void p1advantageScore() {
+        deuce();
+        tennis.p1GetScore();
     }
 }
