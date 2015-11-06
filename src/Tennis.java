@@ -4,6 +4,6 @@
 public class Tennis {
 
     public String scoreText() {
-        return null;
+        return "Love All";
     }
 }
