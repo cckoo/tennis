@@ -22,3 +22,4 @@ public class Advantage implements MatchScore {
         return (advantager.equals(Player.P2)) ? new WinScore(advantager) : new DeuceScore();
     }
 }
+
